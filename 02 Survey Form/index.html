@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</head>
+
+    <header>
+        <h1 id="title">Training Feedback</h1>
+        <p id="description">Take a few minutes to help us improve our Training</p>
+    </header>
+
+    <body>
+    <div id="form">
+        <form id="survey-form">
+          <h2>General information</h2>
+            <label for="name" id="name-label" action="" >Name</label>
+            <input type="text" id="name"  name="name" placeholder="Enter Your Name">
+            <br>
+            <label for="email" id="email-label">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter Your Email">
+            <br>
+            <label for="number" id="number-label">Age</label>
+            <input type="number" id="number" name="number" placeholder="Enter Your Age" min="1" max="99" >
+            <br>
+            
+            <label for="dropdown-trainer" class="dropdown-label">Select Trainer</label>
+            <select id="dropdown-trainer" name="trainer">
+                <option value="Manuela Mueller">Manuella Mueller</option>
+                <option value="Dietrich Weinhaus">Dietrich Weinhaus</option>
+                <option value="Gundula van Garch">Gundula van Garch</option>
+            </select>
+            <br>
+
+            <label for="dropdown-training" class="dropdown-label">Select attended Training</label>
+            <select id="dropdown-training" name="training">
+                <option value="Prince2&copy; Foundation">PRINCE2&copy; Foundation</option>
+                <option value="Prince2&copy; Practitioner">PRINCE2&copy; Practitioner</option>
+                <option value="Prince2&copy; Compact">PRINCE2&copy; Compact</option>
+                <option value="ITIL4&copy; Foundation">ITIL4&copy; Foundation</option>
+                <option value="Human Impact in Projects">Human Impact in Projects</option>
+                <option value="Change Impact in Projects">Change Impact in Projects</option>
+                <option value="Customized Training">Customized Training</option>
+            </select>
+            <br>
+            <label for="free-text-1" class="free-text-label">If you selected Customized Training,<br>please specify here:</label>
+            <textarea type="text" class="free-text" name="free-text-1"></textarea>
+            
+            <h2>The Training</h2>
+              <div class="table">
+                <table>
+                <tr>
+                    <th></th>
+                    <th><img src="img/Star.gif" alt="very satisfied" class="img-smiley"></th>
+                    <th><img src="img/Green_Smiley.gif" alt="satisfied" class="img-smiley"></th>
+                    <th><img src="img/Yellow_Smiley.gif" alt="neutral" class="img-smiley"></th>
+                    <th><img src="img/Red_Smiley.gif" alt="dissatisfied" class="img-smiley"></th>
+                </tr>
+                <tr>
+                    <td class="table-row">Structure of Training?</td>
+                    <td><input type="radio" name="radQ1" value="1" class="radQ" title="Very Satisfied" /></td>
+                    <td><input type="radio" name="radQ1" value="2" class="radQ" title="Satisfied" /></td>
+                    <td><input type="radio" name="radQ1" value="3" class="radQ" title="Neutral" /></td>
+                    <td><input type="radio" name="radQ1" value="4" class="radQ" title="Dissatisfied" /></td>
+                </tr>
+                <tr>
+                    <td class="table-row">Training Material?</td>
+                    <td><input type="radio" name="radQ2" value="1" class="radQ" title="Very Satisfied" /></td>
+                    <td><input type="radio" name="radQ2" value="2" class="radQ" title="Satisfied" /></td>
+                    <td><input type="radio" name="radQ2" value="3" class="radQ" title="Neutral" /></td>
+                    <td><input type="radio" name="radQ2" value="4" class="radQ" title="Dissatisfied" /></td>
+                  </tr>
+                  <tr>
+                    <td class="table-row">Usefulness for your daily work?</td>
+                    <td><input type="radio" name="radQ3" value="1" class="radQ" title="Very Satisfied" /></td>
+                    <td><input type="radio" name="radQ3" value="2" class="radQ" title="Satisfied" /></td>
+                    <td><input type="radio" name="radQ3" value="3" class="radQ" title="Neutral" /></td>
+                    <td><input type="radio" name="radQ3" value="4" class="radQ" title="Dissatisfied" /></td>
+                  </tr>
+                  <tr>
+                    <td class="table-row">Only PRINCE2&copy; and ITIL4&copy;: Level of Preparation for exam?</td>
+                    <td><input type="radio" name="radQ4" value="1" class="radQ" title="Very Satisfied" /></td>
+                    <td><input type="radio" name="radQ4" value="2" class="radQ" title="Satisfied" /></td>
+                    <td><input type="radio" name="radQ4" value="3" class="radQ" title="Neutral" /></td>
+                    <td><input type="radio" name="radQ4" value="4" class="radQ" title="Dissatisfied" /></td>
+                  </tr>
+                </table>
+              </div>
+
+              <div class="table">
+                <h2>The Trainer</h2>
+                <table>
+                <tr>
+                  <th></th>
+                  <th><img src="img/Star.gif" alt="very satisfied" class="img-smiley"></th>
+                  <th><img src="img/Green_Smiley.gif" alt="satisfied" class="img-smiley"></th>
+                  <th><img src="img/Yellow_Smiley.gif" alt="neutral" class="img-smiley"></th>
+                  <th><img src="img/Red_Smiley.gif" alt="dissatisfied" class="img-smiley"></th>
+                </tr>
+                <tr>
+                    <td class="table-row">Expertise?</td>
+                    <td><input type="radio" name="radQ5" value="1" class="radQ" title="Very Satisfied" /></td>
+                    <td><input type="radio" name="radQ5" value="2" class="radQ" title="Satisfied" /></td>
+                    <td><input type="radio" name="radQ5" value="3" class="radQ" title="Neutral" /></td>
+                    <td><input type="radio" name="radQ5" value="4" class="radQ" title="Dissatisfied" /></td>
+                </tr>
+                <tr>
+                    <td class="table-row">Conveyance of content?</td>
+                    <td><input type="radio" name="radQ6" value="1" class="radQ" title="Very Satisfied" /></td>
+                    <td><input type="radio" name="radQ6" value="2" class="radQ" title="Satisfied" /></td>
+                    <td><input type="radio" name="radQ6" value="3" class="radQ" title="Neutral" /></td>
+                    <td><input type="radio" name="radQ6" value="4" class="radQ" title="Dissatisfied" /></td>
+                  </tr>
+                  <tr>
+                    <td class="table-row">Respondance to questions?</td>
+                    <td><input type="radio" name="radQ7" value="1" class="radQ" title="Very Satisfied" /></td>
+                    <td><input type="radio" name="radQ7" value="2" class="radQ" title="Satisfied" /></td>
+                    <td><input type="radio" name="radQ7" value="3" class="radQ" title="Neutral" /></td>
+                    <td><input type="radio" name="radQ7" value="4" class="radQ" title="Dissatisfied" /></td>
+                  </tr>
+                </table>
+              </div>
+              
+
+            <h2>The Venue</h2>
+                <div class="table">
+                  <table>
+                    <tr>
+                      <th></th>
+                      <th><img src="img/Star.gif" alt="very satisfied" class="img-smiley"></th>
+                      <th><img src="img/Green_Smiley.gif" alt="satisfied" class="img-smiley"></th>
+                      <th><img src="img/Yellow_Smiley.gif" alt="neutral" class="img-smiley"></th>
+                      <th><img src="img/Red_Smiley.gif" alt="dissatisfied" class="img-smiley"></th>
+                    </tr>
+                    <tr>
+                        <td class="table-row">Venue in general?</td>
+                        <td><input type="radio" name="radQ8" value="1" class="radQ" title="Very Satisfied" /></td>
+                        <td><input type="radio" name="radQ8" value="2" class="radQ" title="Satisfied" /></td>
+                        <td><input type="radio" name="radQ8" value="3" class="radQ" title="Neutral" /></td>
+                        <td><input type="radio" name="radQ8" value="4" class="radQ" title="Dissatisfied" /></td>
+                    </tr>
+                    <tr>
+                        <td class="table-row">Seminar room?</td>
+                        <td><input type="radio" name="radQ9" value="1" class="radQ" title="Very Satisfied" /></td>
+                        <td><input type="radio" name="radQ9" value="2" class="radQ" title="Satisfied" /></td>
+                        <td><input type="radio" name="radQ9" value="3" class="radQ" title="Neutral" /></td>
+                        <td><input type="radio" name="radQ9" value="4" class="radQ" title="Dissatisfied" /></td>
+                      </tr>
+                      <tr>
+                        <td class="table-row">Catering?</td>
+                        <td><input type="radio" name="radQ10" value="1" class="radQ" title="Very Satisfied" /></td>
+                        <td><input type="radio" name="radQ10" value="2" class="radQ" title="Satisfied" /></td>
+                        <td><input type="radio" name="radQ10" value="3" class="radQ" title="Neutral" /></td>
+                        <td><input type="radio" name="radQ10" value="4" class="radQ" title="Dissatisfied" /></td>
+                      </tr>
+                      <tr>
+                        <td class="table-row">Only answer if you stayed overnight: the hotel room</td>
+                        <td><input type="radio" name="radQ11" value="1" class="radQ" title="Very Satisfied" /></td>
+                        <td><input type="radio" name="radQ11" value="2" class="radQ" title="Satisfied" /></td>
+                        <td><input type="radio" name="radQ11" value="3" class="radQ" title="Neutral" /></td>
+                        <td><input type="radio" name="radQ11" value="4" class="radQ" title="Dissatisfied" /></td>
+                      </tr>
+                    </table>
+                </div>
+                
+            <br>
+            <label for="free-text-2" class="free-text-label">What did you particularly like?</label>
+            <textarea type="text" class="free-text" name="free-text-2"></textarea>
+
+            <label for="free-text-3" class="free-text-label">What did you like less?</label>
+            <textarea type="text" class="free-text" name="free-text-3"></textarea>
+            
+            <label for="free-text-4" class="free-text-label">Anything else you would like to share with us?</label>
+            <textarea type="text" class="free-text" name="free-text-4"></textarea>
+            <br>
+            <button type="button" id="submit">Submit</button>
+            
+            </form>
+    </div>
+    
+</body>
+</html>
