@@ -1,0 +1,233 @@
+/* Global*/
+:root {
+    --main-dgrey: #231F20;
+    --main-bgrey: #3E474D;
+    --main-mgrey: #7c7c7e;
+    --main-lgrey: #aaabab;
+    --main-white: #ffffff;
+    --main-blue: #01B8E1;
+}
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Varta', sans-serif;
+    line-height: 1.5;
+    
+}
+
+/* Navigation*/
+#navbar{
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 300px;
+    border-right: 1px solid var(--main-dgrey);
+    background-color: var(--main-blue);
+    color: var(--main-white);
+    padding: 20px;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+#navbar h1{
+    font-weight: 700;
+}
+#navbar ul{
+    list-style: none;
+}
+
+#navbar li{
+    padding-top:20px;
+    border-bottom: 2px solid var(--main-white);
+}
+
+#navbar a{
+    text-decoration: none;
+    color: var(--main-white)
+}
+
+#navbar a:hover{
+    font-weight: bold;
+}
+
+/*Main Document*/
+/*General*/
+#main-doc{
+    position: absolute;
+    margin-left: 310px;
+    margin-right: 10px;
+    padding: 20px;
+    background-color: var(--main-white);
+    color: var(--main-dgrey);
+}
+section{
+    padding-top: 30px;
+    margin-bottom: 50px;
+    border-top: 2px solid var(--main-blue);
+}
+article{
+    padding-top: 20px;
+}
+#main-doc header{
+    font-size: 25px;
+    font-weight: bold;
+}
+#main-doc h3{
+    margin-top: 0;
+    padding-top:0;
+}
+
+/*Section "Was ist ein Projekt"*/
+#citation::before{
+    content: open-quote;
+    font-size: 20px;
+    color: var(--main-blue);
+}
+
+#citation::after {
+    content: close-quote;
+    font-size: 20px;
+    color: var(--main-blue);
+}
+/*Zusammenhang_Portfolio,_Programm_und_Projekt*/
+.grid-box{
+    display: grid;
+    grid-template: auto/ 10% auto;
+    gap: 1vh;
+    margin-top: 2.5vh;
+    padding: 2vh;
+    border-radius: 25px;
+    background-color: var(--main-blue);
+    color: var(--main-white);
+    grid-template-areas: "img grid-text";
+}
+
+.grid-box img{
+    max-width: 100px;
+    min-width: 24px;
+    justify-self: center;
+    align-self: start;
+}
+
+/*Was_PRINCE2_ausmacht*/
+
+/*Kunden-Lieferanten-Umfeld*/
+
+#Kunden-Lieferanten-Umfeld img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/*Die_Merkmale_eines_Projekts*/
+
+#Die_Merkmale_eines_Projekts img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/*Anforderungen_an_ein_PRINCE2_Projekt*/
+
+#Anforderungen_an_ein_PRINCE2_Projekt img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/*Der_Aufbau_von_PRINCE2_Die_vier_integrierten_Bausteine*/
+
+.box{
+    margin-top: 2.5vh;
+    padding: 2vh;
+    border-radius: 25px;
+    background-color: var(--main-blue);
+    color: var(--main-white);
+}
+
+#Der_Aufbau_von_PRINCE2_Die_vier_integrierten_Bausteine img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.seven{
+    color: var(--main-bgrey);
+    font-size: 30px;
+}
+
+/*Die_sieben_Grundprinzipien*/
+
+#Die_sieben_Grundprinzipien ol{
+    padding: 20px;
+}
+
+#Die_sieben_Grundprinzipien li{
+    padding: 20px;
+    font-weight: bold;
+    color: var(--main-blue);
+}
+
+#Die_sieben_Grundprinzipien h4{
+    color: var(--main-dgrey);
+}
+
+#Die_sieben_Grundprinzipien p{
+    color: var(--main-dgrey);
+    font-weight: 400;
+}
+
+.blue{
+    color: var(--main-blue);
+    font-weight: bold;
+}
+
+/*Referenz*/
+
+#Referenz img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/*Media Query*/
+@media only screen and (max-width: 1024px) {
+    #Der_Aufbau_von_PRINCE2_Die_vier_integrierten_Bausteine img,
+    #Kunden-Lieferanten-Umfeld img,
+    #Die_Merkmale_eines_Projekts img,
+    #Anforderungen_an_ein_PRINCE2_Projekt img,
+    #Der_Aufbau_von_PRINCE2_Die_vier_integrierten_Bausteine img,
+    #Referenz img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #navbar{
+        position: relative;
+        width: auto;
+        padding: 20px;
+        background-color: var(--main-blue);
+        color: var(--main-white);
+    }
+
+    #main-doc{
+        position: relative;
+        margin: 10px;
+        padding: 20px;
+        background-color: var(--main-white);
+        color: var(--main-dgrey);
+    }
+}
+/*
+
+*/
