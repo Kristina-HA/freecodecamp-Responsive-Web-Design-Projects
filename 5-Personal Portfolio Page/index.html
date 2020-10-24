@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio-Page KHA">
+    <meta name="keywords" content="TBD">
+    <meta name="author" content="Kristina Hoffmann-Astroth">
+    <title>Portfolio-Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</head>
+<body>
+    <!--Navbar-->
+    <header>
+        <nav id="navbar">
+        <img id="logo" src="img/Logo.svg" alt="logo">
+        <ul class="navlink">
+            <li><a href="#welcome-section">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <!--Main-->
+    <main>
+        <section id="welcome-section">
+            <div id="container-welcome">
+            <h1>Hi, my name is <span>Kristina</span>.</h1>
+            <h2 id="welcome">I like to design and code user friendly websites.</h2>
+            <a class="btn-scroll-down" href="#about">Learn more</a>
+            </div>
+        </section>
+
+        <section id="about">
+                <h2>About me</h2>
+                <div class="container">
+                    <div class="flex-item">
+                    <img src="img/AboutMe.jpg" alt="about me">
+                    </div>
+                    <div class="flex-item1">
+                    <h3><span>Hello there!</span> I'm an front-end web developer and UI/UX-Designer. </h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure quo quos odit ratione minima optio sunt aperiam nostrum natus nam. Veniam tempore fuga perspiciatis minus qui, nisi unde odit. Provident.</p>
+                    </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>These are some of my projects</h2>
+            <div id="grid-container">
+                <div class="project-tile" id="tile1">
+                    <a href="https://www.astroth-training.de"><img src="img/Landing Page.png" alt="Landing Page"></a>
+                    <a href="https://www.astroth-training.de">
+                        <div class="overlay">
+                            <div class="text">Landing Page</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="project-tile" id="tile2">
+                    <img src="img/Technical Documentation.png" alt="Technical Documentation">
+                    <div class="overlay">
+                        <div class="text">Technical Documentation</div>
+                    </div>
+                </div>
+                <div class="project-tile" id="tile3">
+                    <img src="img/PortfolioPage.png" alt="Portfolio Page">
+                    <div class="overlay">
+                        <div class="text">Portfolio Page</div>
+                    </div>
+                </div>
+                <div class="project-tile" id="tile4">
+                    <img src="img/TributeHomepage.png" alt="Tribute Homepage">
+                    <div class="overlay">
+                        <div class="text">Tribute Homepage</div>
+                    </div>
+                </div>
+                <div class="project-tile" id="tile5">
+                    <img src="img/Form.png" alt="Survey Form">
+                    <div class="overlay">
+                        <div class="text">Survey Form</div>
+                    </div>
+                </div>
+                <div class="project-tile" id="tile6">
+                    <img src="img/OnePager.png" alt="OnePager">
+                    <div class="overlay">
+                        <div class="text">OnePager</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    <!--Contact-->
+        <section id="contact">
+            <h2>Get in touch to discuss collaboration</h2>
+            <div class="grid-container">
+                <div id="contact-form">
+                    <form id="form" action="https://www.freecodecamp.com/email-submit">
+                        <h3>Write me a message</h3><br>
+                        <label for="name" id="name-label" >Name</label><br>
+                        <input type="text" id="name"  name="name"><br>
+                        <label for="email" id="email-label" >Email</label><br>
+                        <input type="email" id="email" name="email"><br>
+                        <label for="free-text" id="free-text-label" >Your Message</label><br>
+                        <textarea type="text" id="free-text" name="free-text"></textarea><br>
+                        <input type="submit" id="submit" name="submit-button" value="Submit">
+                    </form>
+                </div>
+                <div id="social-media">
+                    <h3>Follow me on social media</h3>
+                    <a id="profile-link" href="https://github.com/Kristina-HA" target="_blank"><img class="icon"  src="img/GitHub-Mark-64px.png"></a>
+                    <a href="#"><img class="icon" src="img/LI-In-Bug.png"></a>
+                    <a href="#"><img class="icon" src="img/Button-Fill-Black-Large.png"></a>
+                </div>
+            </div>  
+            <br>
+            <br>
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <p>This is a fake portfolio | &copy; Kristina Hoffmann-Astroth</p>
+    </footer>
+</body>
+</html>

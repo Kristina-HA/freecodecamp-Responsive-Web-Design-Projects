@@ -1,0 +1,421 @@
+/*Global*/
+
+:root{
+    --main-white: #F5F5F4;
+    --main-green: #6C8D8C;
+    --main-lila: #919ee6;
+    --main-red: #b33b58;
+    --main-dblue: #261E34;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    color: var(--main-dblue);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out,
+              color 0.2s ease-in-out;
+}
+
+/*Navbar
+============================================================*/
+#navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 2em /*10vh*/;
+    background-color: var(--main-green);
+    border-top: var(--main-white) 1vh solid;
+    z-index: 1;
+}
+
+#navbar img{
+    display: flex;
+    height: 3.5em;
+}
+
+.navlink {
+    display: flex;
+    justify-content:space-around;
+    width: 50%;
+    
+} 
+
+.navlink li{
+    list-style: none;
+}
+
+.navlink a{
+    color: var(--main-white);
+    text-decoration: none;    
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.navlink a:hover {
+    color: var(--main-dblue);
+    text-decoration: none;       
+    font-size: 1.5rem;
+}
+
+/*Main
+============================================================*/
+
+/*Welcome Section*/
+#welcome-section {
+    background-image: url(img/ryan-quintal-Q5H8WRXCZyw-unsplash.jpg);
+    color: var(--main-dblue);
+    height: 100vh;
+    background-position: top-center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#container-welcome{
+    padding: 40vh 0 40vh 0;
+    text-align: center;
+}
+
+#welcome-section h1{
+    font-size: 4em;
+}
+
+#welcome-section h1 span{
+    color: var(--main-red);
+}
+
+#welcome-section h2{
+    font-size: 2em;
+    margin-bottom: 2em;
+    margin-top:0.5em;
+}
+#welcome::before{
+    content:'<';
+    color: var(--main-red);
+}
+
+#welcome::after{
+    content:'/>';
+    color: var(--main-red);
+}
+
+.btn-scroll-down{
+    font-weight: bold;
+    color: var(--main-red);
+    background-color: transparent;
+    padding: 1em 2em 1em 2em;
+    border-radius: 0.5em;
+    border: 2px solid var(--main-red);
+}
+
+.btn-scroll-down:hover{
+    color: var(--main-white);
+    background-color: var(--main-red);
+}
+
+
+/*About me Section
+=============================================*/
+#about{
+    background-color: var(--main-dblue);
+    min-height: 100vh;
+}
+
+#about h2{
+    font-size: 2em;
+    /*margin-bottom: 2vw;*/
+    padding: 2.3em 7.5vw 5vw 7.5vw;
+    text-align: center;
+    color: var(--main-white);
+}
+
+#about h2::before{
+    content:'<';
+    color: var(--main-red);
+}
+
+#about h2::after{
+    content:'/>';
+    color: var(--main-red);
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0 7.5vw 0 7.5vw;
+    align-items:center;
+    justify-content: space-evenly;
+}
+
+
+.container h3{
+    margin-bottom: 1.5vw;
+    color: var(--main-white);
+}
+
+.container h3 span{
+    font-size: 1.1em;
+    color: var(--main-red);
+}
+
+.flex-item1{
+    margin: 0 0 2em 2em;
+    width: 30em;
+}
+
+.container p{
+    color: var(--main-white);
+}
+
+.container img{
+    border-radius: 50%;
+    border: 0.4em solid var(--main-white);
+    width:300px;
+    margin-bottom:2em;
+}
+/*Project Section
+=============================================*/
+#projects{
+    background-color: var(--main-white);
+    width: 100%;
+    min-height: 100vh;
+}
+
+#projects h2{
+    font-size: 2em;
+    margin-bottom: 2vw;
+    padding: 2.3em 0 5vw 0;
+    text-align: center;
+    color: var(--main-dblue);
+}
+
+#projects h2::before{
+    content:'<';
+    color: var(--main-red);
+}
+
+#projects h2::after{
+    content:'/>';
+    color: var(--main-red);
+}
+#grid-container{
+    display: grid;
+    position: relative;
+    margin: 0 7.5vw 0 7.5vw;
+    padding-bottom: 7.5vw;
+    grid-template: 25vw 25vw/ 25vw 25vw 25vw;
+    column-gap: 5vw;
+    row-gap: 5vw;
+    grid-template-areas: "tile1 tile2 tile3" "tile4 tile5 tile6";
+}
+
+.project-tile img{
+    display: block;
+    width: 100%;
+}
+
+.project-tile{
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 25vw;
+    width: 25vw;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: var(--main-lila);
+  }
+  
+  .project-tile:hover .overlay {
+    opacity: 1;
+  }
+
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+/*Contact
+=============================================*/
+#contact {
+    background-image: url(img/ryan-quintal-Q5H8WRXCZyw-unsplash.jpg);
+    color: var(--main-dblue);
+    min-height: 100vh;
+    background-position: top-center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#contact h2 {
+    font-size: 2em;
+    margin-bottom: 1vw;
+    padding: 2.3em 0 5vw 0;
+    text-align: center;
+    color: var(--main-dblue)
+}
+
+#contact h2::before{
+    content:'<';
+    color: var(--main-red);
+}
+
+#contact h2::after{
+    content:'/>';
+    color: var(--main-red);
+}
+
+#contact .grid-container{
+    display: grid;
+    position: relative;
+    margin: 0 7.5vw 0 7.5vw;
+    padding: 2vw 5vw 2vw 5vw;
+    grid-template: auto/ 48% 48%;
+    column-gap: 5vw;
+    grid-template-areas: "contact-form" "social-media";
+    background-color: rgba(179, 59, 88, 0.5);
+}
+#contact h3{
+    font-size: 1.5em;
+}
+#name, #email, #free-text{
+    display: inline-block;
+    margin: 0.5em;
+    padding: 0.25em;
+    padding-left:0.5em;
+    text-align: left;
+    background-color: var(--main-white);
+    vertical-align: middle;
+    width: 90%;
+    border: 1.5px solid var(--main-dblue);
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#name-label, #email-label, #free-text-label{
+    padding-left: 0.5em;
+    font-weight: bold;
+}
+#submit{
+    font-weight: bold;
+    color: var(--main-dblue);
+    background-color: var(--main-white);
+    margin: 0.5em;
+    padding: 1em 2em 1em 2em;
+    border-radius: 0.5em;
+    border: 2px solid var(--main-dblue);
+}
+
+#submit:hover{
+    color: var(--main-white);
+    background-color: var(--main-dblue);
+}
+
+.icon{
+    display: center;
+    width: 2em;
+    margin: 2em 0.5em 0.5em 0.5em ;
+}
+
+/*Footer
+=============================================*/
+
+footer{
+    background-color: var(--main-dblue);
+    color: var(--main-white);
+    min-height: 3em;
+    text-align: center;
+}
+
+footer p{
+    color: var(--main-white);
+    padding: 1em;
+}
+/*Responsive Layout
+=============================================*/
+@media screen and (max-width:1024px){
+    #grid-container{
+        grid-template: 30vw 30vw 30vw/ 30vw 30vw;
+        row-gap: 7.5vw;
+        column-gap: 7.5vw;
+        grid-template-areas: "tile1 tile2" "tile3 tile4" "tile5 tile6";
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .overlay {
+        height: 30vw;
+        width: 30vw;
+      }
+}
+
+@media screen and (max-width:768px){
+    #navbar {
+        display: flex;
+        flex-wrap: wrap; 
+    }
+    .navlink {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+        width: 90%;
+    }
+
+    .navlink li{
+        padding: 1em 0 1em 0;
+    }
+
+    #about h2, #projects h2, #contact h2{
+        padding-top: 4.2em;
+    }
+
+    #grid-container{
+        grid-template: 40vw 40vw 40vw 40vw 40vw 40vw/ 40vw;
+        row-gap: 10vw;
+        grid-template-areas: "tile1" "tile2" "tile3" "tile4" "tile5" "tile6";
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .overlay {
+        height: 40vw;
+        width: 40vw;
+      }
+
+      #contact .grid-container{
+        grid-template: auto auto/ 70vw;
+        row-gap: 10vw;
+        grid-template-areas: "contact-form" "social-media" ;
+        margin: 0 7.5vw 0 7.5vw;
+        padding: 5vw 10vw 5vw 10vw;
+      }
+      
+      #name, #email, #free-text{
+          width: 80%;
+      }
+}
